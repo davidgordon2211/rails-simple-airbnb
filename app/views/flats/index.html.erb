@@ -1,0 +1,16 @@
+<div class="card" style="width: 18rem;">
+  <div class="cards">
+  <% @flats.each do |f| %>
+    <div class="box">
+      <h5><%= f.name %></h5>
+    <p><%= f.address %></p>
+      <i class="fas fa-user-friends"></i> <p><%= f.number_of_guests %></p>
+      <i class="fas fa-euro-sign"></i><p><%= f.price_per_night %></p>
+    </div>
+    <%= link_to flat_path(f) do %>
+      <p>More info</p>
+    <% end %>
+  <% end %>
+    </div>
+  </div>
+</div>
